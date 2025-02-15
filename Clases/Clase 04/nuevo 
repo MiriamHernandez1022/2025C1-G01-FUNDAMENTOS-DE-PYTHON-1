@@ -1,0 +1,5 @@
+area = (base * altura) / 2
+print(el area del triangulo es: {area})
+input("Presione una tecla para salir...")
+
+

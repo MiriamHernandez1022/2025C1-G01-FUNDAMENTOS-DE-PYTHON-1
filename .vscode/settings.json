@@ -1,0 +1,6 @@
+{
+    "editor.defaultFormatter": "njpwerner.autodocstring",
+    "editor.defaultFoldingRangeProvider": "nhatvu148.jupiter",
+    "notebook.defaultFormatter": "nhatvu148.jupiter",
+    "databricks.sensitiveValueStore": "VSCodeSettings"
+}
