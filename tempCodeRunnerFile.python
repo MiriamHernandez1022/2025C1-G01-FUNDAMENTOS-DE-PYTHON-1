@@ -1,0 +1,519 @@
+# %% [markdown]
+# # NOTEBOOK 03 - PARTE I Ejecución Condicional, Bucles, Listas y su Procesamiento
+# 
+# ## Fundamentos de Python | UMCA
+# 
+# ## Profesor: Ing. Andrés Mena Abarca
+# 
+# ### <mark>**Nombre del estudiante:**</mark>
+# 
+# * * *
+# 
+# ## **1\. Valores Booleanos**
+# 
+# ### 1.1. **Teoría**
+# 
+# En Python, los valores booleanos son un tipo de dato que solo pueden tener dos valores: `True` (verdadero) y `False` (falso). Estos valores son fundamentales para el control de flujo en los programas, permitiendo que se tomen decisiones basadas en condiciones.
+# 
+# - `True` y `False` son palabras clave en Python.
+# - Se usan principalmente en expresiones condicionales y bucles.
+# 
+# #### **Operadores de comparación**: Estos operadores devuelven un valor booleano como resultado de comparar dos valores.
+# 
+# - `==` (igual a)
+# - `!=` (diferente de)
+# - `<`, `>`, `<=`, `>=` (menor, mayor, menor o igual, mayor o igual)
+# 
+# ### 1.2. **Ejemplo de Código**
+
+# %%
+# Ejemplo de valores booleanos
+x = 10
+y = 20
+
+# Operación de comparación
+es_mayor = x > y  # False porque 10 no es mayor que 20
+es_igual = x == y  # False porque 10 no es igual a 20
+
+print(f"¿Es {x} mayor que {y}? {es_mayor}")
+print(f"¿Es {x} igual a {y}? {es_igual}")
+
+
+# %% [markdown]
+# ### <mark>1.3. **Ejercicio Práctico**</mark>
+# 
+# **Caso de Aplicación: Evaluación de Edades para una Competencia Deportiva**
+# 
+# Imagina que estás organizando una competencia deportiva y necesitas verificar si un participante es elegible para competir en una categoría específica de edad. En esta categoría, los participantes deben tener entre **18 y 30 años** (inclusive). También se deben evaluar dos edades de los participantes, para ver quién es mayor o si tienen la misma edad.
+# 
+# El ejercicio requerirá:
+# 
+# - Evaluar si un participante es elegible para competir según su edad.
+# - Comparar las edades de dos participantes para determinar quién es mayor.
+# 
+# **Proceso**
+# 
+# 1. **Solicita** <span style="color: var(--vscode-foreground);"> al usuario que ingrese la edad de dos participantes (edad1 y edad2).</span>
+# 2. **Verifica** <span style="color: var(--vscode-foreground);"> si cada uno de ellos es elegible para la competencia (la edad debe estar entre 18 y 30 años inclusive).</span>
+# 
+# 3. **Compara** las edades de los dos participantes:
+#         - ¿Quién es mayor?
+#         - ¿Son de la misma edad?
+# 4. **Imprime** resultados detallados de las evaluaciones.
+
+# %%
+#Respuesta
+
+# %% [markdown]
+# ## **2\. Ejecución Condicional**
+# 
+# ### 2.1. **Teoría**
+# 
+# La ejecución condicional permite que el programa tome decisiones y ejecute diferentes bloques de código basados en ciertas condiciones. En Python, las estructuras condicionales más comunes son `if`, `elif` (else if) y `else`.
+# 
+# ### **Estructura básica:**
+# 
+# ```Python
+# if condición:
+#     # Código si la condición es True
+# elif otra_condición:
+#     # Código si otra_condición es True
+# else:
+#     # Código si ninguna condición es True 
+# 
+# ```
+# 
+# ### 2.2. **Ejemplo de Código: Clasificación de Calificaciones**
+# 
+# #### **Contexto:**
+# 
+# Imagina que estás desarrollando un sistema para clasificar las calificaciones de un grupo de estudiantes. El sistema debe recibir una calificación y asignar una letra basada en la siguiente escala:
+# 
+# - Si la calificación es mayor o igual a 90, el estudiante obtiene una **A**.
+# - Si la calificación está entre 80 y 89, el estudiante obtiene una **B**.
+# - Si la calificación está entre 70 y 79, el estudiante obtiene una **C**.
+# - Si la calificación está entre 60 y 69, el estudiante obtiene una **D**.
+# - Si la calificación es menor que 60, el estudiante obtiene una **F**.
+# 
+# ### **Estructura Condicional**
+# 
+# Usaremos una serie de sentencias `if`, `elif` y `else` para implementar esta lógica.
+
+# %%
+try:
+    nota = float(input("Ingrese la nota obtenida"))
+    if nota > 0 and nota <= 100:
+        pass     
+except ValueError:
+    print("Error: por favor ingrese un valor numerico")
+    if nota >= 90:
+        print("La nota (nota) corresponde a una 'A' Genial!")
+    elif nota >= 80:
+        print("La nota (nota) es una 'B', le falta")
+    elif nota >= 70:
+        print("La nota (nota) es una 'C', siga esforzandose")
+    elif nota >= 60:
+        print("La nota (nota) es una 'D' esta muy mal y hay que trabajar")
+    else
+        print("La nota (nota) es una 'F' usted ha reprobado")
+
+    
+
+
+# %% [markdown]
+# ### <mark>2.3. **Ejercicio Práctico**</mark>
+# 
+# ### Escribe un programa que pida al usuario ingresar su edad. Luego, el programa debe imprimir si es mayor o menor de edad (asumiendo 18 años como el límite).
+# 
+# - El programa pide al usuario ingresar su edad.
+# - Si el usuario ingresa un valor no válido (por ejemplo, texto o números negativos), le solicita nuevamente que ingrese un número válido.
+# - Dependiendo de la edad ingresada, el programa:
+#     - Imprime si es "menor de edad" (menor de 18).
+#     - Imprime si es "mayor de edad" (18 años o más).
+#     - Opcionalmente, imprime un mensaje especial para niños menores de 13 años o personas mayores de 65 años.
+# - Permite que el usuario repita el proceso tantas veces como desee. \*\*\*OPCIONAL
+
+# %%
+try:
+    edad= int(input("Por favor ingrese su edad"))
+    print(edad)
+    if edad > 0 and edad <=120
+        pass
+except ValueError:
+    print("Error: Por favor ingrese una edad valida")
+    if edad < 18:
+        print("menor de edad")
+    
+    
+
+# Ejercicio para verificar si una persona es mayor o menor de edad
+
+# %%
+While True:
+    try:
+        # Solicitar la edad del usuario
+        edad = int(input("Por favor, ingresa tu edad: "))
+
+
+        # Verificar si la edad es un valor positivo
+        if  not(120 >= edad >= 0):
+            print("Error: La edad no puede ser un número negativo o superior a 120 años. Inténtalo de nuevo.")
+            continue  # Reinicia el ciclo para pedir la edad nuevamente
+
+
+        # Evaluar la edad ingresada
+        if edad < 13:
+            print(f"Tienes {edad} años. Eres un niño/a.")
+        elif edad < 18:
+            print(f"Tienes {edad} años. Eres menor de edad.")
+        elif edad < 65:
+            print(f"Tienes {edad} años. Eres mayor de edad.")
+        else:
+            print(f"Tienes {edad} años. Eres una persona mayor. ¡Disfruta de tu experiencia!")
+        
+        # Preguntar si el usuario quiere ingresar otra edad
+        repetir = input("¿Quieres ingresar otra edad? (s/n): ").strip().lower()
+        if repetir != "s":
+            print("Gracias por usar el programa. ¡Hasta luego!")
+            break  # Salir del bucle si el usuario no quiere continuar
+
+
+    except ValueError:
+        # Manejar el caso en el que el usuario no ingresa un número válido
+        print("Error: Por favor, ingresa un valor numérico válido para la edad.")
+
+
+# %% [markdown]
+# ## **3\. Bucles**
+# 
+# ### 3.1. **Teoría**
+# 
+# Los bucles permiten repetir un bloque de código varias veces. Python tiene dos tipos principales de bucles: `for` y `while`.
+# 
+# - **Bucle `for`:** Se utiliza para iterar sobre una secuencia (listas, tuplas, cadenas, etc.).
+# - **Bucle `while`:** Repite un bloque de código mientras una condición sea `True`.
+# 
+# ### 3.2. **Ejemplo de Código**
+# 
+# ### 
+# 
+# - **Bucle `for`:**
+
+# %%
+for i in range(1,10):
+    print(f'Iteración {i}')
+
+
+
+for i in range(10):
+    print(f'Iteración {i}')
+
+
+for i in range(0,100,10):
+    print(f'Iteración {i}')
+
+# %% [markdown]
+# ### **Caso: Suma de numeros del 1 a la cantidad que defina el usuario.**
+# 
+# Vamos a suponer que queremos calcular la suma de los números del 1 a la catidad que deficna el suario. Este caso es útil para entender cómo funciona el bucle `for`, ya que iteramos sobre una secuencia de números y realizamos una operación en cada iteración.
+
+# %%
+#Respuesta
+#Respuesta
+suma = 0
+
+
+#Usar bucle for para definir el final de la secuencia a sumar
+num = int(input('Íngrese el numero a sumar en secuencia: '))
+
+
+for i in range(1 , num + 1): #Llegar a limete que se ingreso en el input
+    suma = suma + i #Sumo el valor de cada iteración
+    
+print(f'La suma de los numero del 1 al {num} es: {suma}')
+
+
+# %% [markdown]
+# ### 
+# 
+# - **Bucle** `while`:
+
+# %%
+# Ejemplo de bucle while
+contador = 1
+suma = 0
+while contador <= 10:
+    suma += contador  #suma = suma + contador
+    print(f'Contador : {contador}')
+    contador += 1 #contador = contador + 1
+    
+print(f'La suma de los numero del 1 al 10 es: {suma}')
+
+
+# %% [markdown]
+# ### **Caso: Cálculo de Total de Compras**
+# 
+# #### <span style="color: var(--vscode-foreground); font-weight: normal;">Imagina que estás desarrollando un pequeño programa para una tienda. Los clientes ingresan el precio de varios productos que están comprando, uno por uno. El programa debe seguir pidiendo el precio de cada producto hasta que el usuario indique que no va a ingresar más productos, y al final, debe calcular y mostrar el total a pagar.</span>
+
+# %%
+#Respuesta
+while True:
+    try:
+        # Solicitar la edad del usuario
+        edad = int(input("Por favor, ingresa tu edad: "))
+
+
+        # Verificar si la edad es un valor positivo
+        if  not(120 >= edad >= 0):
+            print("Error: La edad no puede ser un número negativo o superior a 120 años. Inténtalo de nuevo.")
+            continue  # Reinicia el ciclo para pedir la edad nuevamente
+
+
+        # Evaluar la edad ingresada
+        if edad < 13:
+            print(f"Tienes {edad} años. Eres un niño/a.")
+        elif edad < 18:
+            print(f"Tienes {edad} años. Eres menor de edad.")
+        elif edad < 65:
+            print(f"Tienes {edad} años. Eres mayor de edad.")
+        else:
+            print(f"Tienes {edad} años. Eres una persona mayor. ¡Disfruta de tu experiencia!")
+        
+        # Preguntar si el usuario quiere ingresar otra edad
+        repetir = input("¿Quieres ingresar otra edad? (s/n): ").strip().lower()
+        if repetir != "s":
+            print("Gracias por usar el programa. ¡Hasta luego!")
+            break  # Salir del bucle si el usuario no quiere continuar
+
+
+    except ValueError:
+        # Manejar el caso en el que el usuario no ingresa un número válido
+        print("Error: Por favor, ingresa un valor numérico válido para la edad.")
+
+
+# %% [markdown]
+# ### <mark>3.3. **Ejercicio Práctico -** Tabla de Multiplicar</mark>
+# 
+# **Descripción:** Crea un programa que pida al usuario un número entero `n` y muestre la tabla de multiplicar de ese número del 1 al 10. Utiliza un ciclo `while` para generar la tabla.
+# 
+# **Instrucciones:**
+# 
+# 1. Solicita al usuario que ingrese un número entero.
+# 2. Inicializa una variable `i` en 1.
+# 3. Utiliza un ciclo `while` para que mientras `i` sea menor o igual a 10:
+#     - Multiplica `n` por `i` y muestra el resultado en el formato "n x i = resultado".
+#     - Incrementa `i` en 1.
+# 4. Al final, muestra la tabla completa.
+# 
+# **Ejemplo de salida:**
+# 
+# ```
+# 
+# Ingrese un número entero: 3
+# Tabla de multiplicar de 3:
+# 
+# 3 x 1 = 3
+# 3 x 2 = 6
+# 3 x 3 = 9
+# 3 x 4 = 12
+# 3 x 5 = 15
+# 3 x 6 = 18
+# 3 x 7 = 21
+# 3 x 8 = 24
+# 3 x 9 = 27
+# 3 x 10 = 30
+# 
+# ```
+
+# %%
+#Respuesta
+
+n = int(input("Ingresa un número entero: "))
+
+# Inicializar la variable i en 1
+i = 1
+
+# Utilizar un ciclo while para mostrar la tabla de multiplicar
+print(f"Tabla de multiplicar del {n}:")
+while i <= 10:
+    resultado = n * i
+    print(f"{n} x {i} = {resultado}")
+    i += 1
+
+# %% [markdown]
+# #### <mark>3.3. Ejercicio Práctico</mark>
+# 
+# Escribe un programa que imprima los números del 1 al 10 usando un bucle for. Luego, realiza el mismo ejercicio con un bucle while.
+
+# %%
+#Respuesta
+print("Usando un bucle for:")
+for i in range(1, 11):
+    print(i)
+
+# %% [markdown]
+# **Caso 2: Suma de Números**
+# - **Presentación:** Supongamos que tienes una lista de números y quieres calcular la suma total. ¿Cómo podrías hacer esto en Python?    
+# - **Salida Esperada:**    
+#     - La suma total de los números en la lista.
+# - **Preguntas adicionales:**    
+#     - ¿Cómo podrías calcular el promedio de los números?
+#     - ¿Y si quisieras encontrar el número más grande y el más pequeño?
+#     - ¿Puedes modificar el código para que solo sume los números pares?
+
+# %%
+# detalle de los numeros 
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# 1. Suma total de los números
+suma_total = sum(numeros)
+print(f"Suma total de los números: {suma_total}")
+
+# 2. Promedio de los números
+promedio = suma_total / len(numeros)
+print(f"Promedio de los números: {promedio}")
+
+# 3. Número más grande
+numero_mas_grande = max(numeros)
+print(f"El número más grande es: {numero_mas_grande}")
+
+# 4. Número más pequeño
+numero_mas_pequeno = min(numeros)
+print(f"El número más pequeño es: {numero_mas_pequeno}")
+
+# 5. Suma de los números pares
+suma_pares = sum(n for n in numeros if n % 2 == 0)
+print(f"Suma de los números pares: {suma_pares}")
+
+# %% [markdown]
+# 
+
+# %% [markdown]
+# ## **4\. Listas y su Procesamiento**
+# 
+# ### 4.1. **Teoría**
+# 
+# Una lista es una estructura de datos en Python que almacena múltiples elementos en un solo objeto. Las listas son mutables, lo que significa que podemos modificar su contenido después de haberlas creado.
+# 
+# ### **Operaciones comunes con listas:**
+# 
+# - **Añadir elementos:** `append()`, `insert()`
+# - **Eliminar elementos:** `remove()`, `pop()`
+# - **Acceso a elementos:** Índices
+# - **Slicing:** Obtener sublistas
+# 
+# ### 4.2. **Ejemplo de Código**
+
+# %%
+# Ejemplo de procesamiento de listas
+
+
+# %% [markdown]
+# ### <mark>4.3. **Ejercicio Práctico**</mark>
+# 
+# Imagina que quieres crear una lista de tus amigos. ¿Cómo podrías almacenar estos nombres en Python? Una vez que tengas la lista, ¿cómo podrías agregar un nuevo amigo? ¿Y cómo podrías saludar a cada uno de ellos?
+# 
+# ```
+# amigos = ["Ana", "Juan", "María", "Pedro"\] \# ... (resto del código)
+# 
+# ```
+# 
+# **Salida Esperada:**
+# 
+# ```
+# - Una lista impresa con todos los nombres de los amigos.
+# - El nombre del tercer amigo.
+# - Un saludo personalizado para cada amigo.
+# 
+# ```
+# 
+# **Preguntas adicionales:**
+# 
+# ```
+# - ¿Cómo podrías eliminar a un amigo de la lista?
+# - ¿Qué pasa si quieres cambiar el nombre de un amigo?
+# - ¿Puedes ordenar la lista alfabéticamente?
+# 
+# ```
+
+# %%
+#Respuesta
+
+# %% [markdown]
+# ## **4\. Listas y su Procesamiento**
+# 
+# ### 4.1. **Teoría**
+# 
+# Una lista es una estructura de datos en Python que almacena múltiples elementos en un solo objeto. Las listas son mutables, lo que significa que podemos modificar su contenido después de haberlas creado.
+# 
+# ### **Operaciones comunes con listas:**
+# 
+# - **Añadir elementos:** `append()`, `insert()`
+# - **Eliminar elementos:** `remove()`, `pop()`
+# - **Acceso a elementos:** Índices
+# - **Slicing:** Obtener sublistas
+# 
+# ### 4.2. **Ejemplo de Código**
+
+# %%
+# Ejemplo de procesamiento de listas
+#             0          1          2
+
+# %% [markdown]
+# **append(elemento):**
+# 
+# - Agrega un elemento al final de la lista.
+
+# %%
+
+
+# %% [markdown]
+# **insert(índice, elemento):**
+# 
+# - Inserta un elemento en una posición específica de la lista.
+# - El índice indica la posición antes de la cual se insertará el elemento.
+
+# %%
+
+
+# %% [markdown]
+# **remove(elemento):**
+# 
+# - Elimina la primera ocurrencia de un elemento específico de la lista.
+# - Si el elemento no existe, se produce un error.
+
+# %%
+
+
+# %% [markdown]
+# **pop(índice):**
+# 
+# - Elimina y devuelve el elemento en la posición indicada.
+# - Si no se especifica un índice, elimina y devuelve el último elemento.
+
+# %%
+
+
+# %% [markdown]
+# ### **<mark>Caso Final</mark>** 
+# 
+#   
+# 
+# Un profesor quiere llevar un registro de los nombres de sus estudiantes. Ayúdale a crear un programa que le permita agregar nuevos estudiantes, ver la lista completa y acceder a la información de un estudiante en particular.
+
+# %%
+
+
+# %%
+
+
+# %%
+
+
+# %%
+# Ejercicio: Sumar los números del 1 al 10
+total = 0
+for i in range(1, 11):
+    total += i
+print("La suma de los números del 1 al 10 es:", total)
+
+
